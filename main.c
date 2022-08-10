@@ -11,6 +11,6 @@
 int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
 	/* environ is declared in 'shell.h' */
-	shell_loop(environ);
+	shell_loop(argv[0]);
 	return (0);
 }

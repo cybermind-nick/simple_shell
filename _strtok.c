@@ -1,5 +1,5 @@
 #include "shell.h"
-#define DELIM " \t\r\n\a"
+#define DELIM "\n"
 
 /**
 * _strtok - returns a null terminated array of tokens
@@ -12,6 +12,7 @@ char **_strtok(char *line)
 	char **tokens = malloc(bufsize * sizeof(char *));
 	char *token;
 
+
 	if (!tokens)
 	{
 	perror("Allocation error\n");
@@ -19,6 +20,7 @@ char **_strtok(char *line)
 	}
 
 	token = strtok(line, DELIM);
+
 	while (token != NULL)
 	{
 	tokens[position] = token;

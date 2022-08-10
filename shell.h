@@ -10,10 +10,10 @@
 /* environment variables */
 extern char **environ;
 
-void shell_loop(char **env);
+void shell_loop(char *argv);
 char *read_line(void);
 char **_strtok(char *line);
-int shell_execute(char **args, char **env);
+int shell_execute(char *argv, char **args);
 void non_interactive(char **env);
 
 #endif
