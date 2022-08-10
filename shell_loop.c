@@ -14,9 +14,8 @@ void shell_loop(char *argv)
 	do {
 		if (isatty(0) == 1)
 		{
-		/*This wil check whether the program is in interactive mode or not*/
 			status = write(STDOUT_FILENO, shell_prompt, 10);
-		}
+ 		}
 	line = read_line();
 	tokens = _strtok(line);
 	status = shell_execute(argv, tokens);
