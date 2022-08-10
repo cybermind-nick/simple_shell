@@ -2,7 +2,7 @@
 
 /**
  * shell_loop - main program execution loop
- * @env: environment variables
+ * @argv: program name from main
  */
 
 void shell_loop(char *argv)
@@ -15,7 +15,7 @@ void shell_loop(char *argv)
 		if (isatty(0) == 1)
 		{
 			status = write(STDOUT_FILENO, shell_prompt, 10);
- 		}
+		}
 	line = read_line();
 	tokens = _strtok(line);
 	status = shell_execute(argv, tokens);
