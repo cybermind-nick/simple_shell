@@ -3,7 +3,7 @@
 /**
  * shell_execute - creates a fork and executes a command
  * @args: null terminated array to serve as arguments for execve()
- * @env: environment variable from main
+ * @argv: program name from main
  * Return: 1 on success. Exit on failure
  */
 
