@@ -15,7 +15,7 @@ void shell_loop(char **env)
 		if (isatty(0) == 1)
 		{
 		/*This wil check whether the program is in interactive mode or not*/
-			status = write(STDOUT_FILENO, shell_prompt, sizeof(shell_prompt));
+			status = write(STDOUT_FILENO, shell_prompt, sizeof(shell_prompt) + 1);
 		}
 		else
 		{
