@@ -1,5 +1,5 @@
 #include "shell.h"
-#define DELIM "\n"
+#define DELIM " \n\t\a\r"
 
 /**
 * _strtok - returns a null terminated array of tokens
