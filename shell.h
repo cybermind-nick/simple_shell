@@ -14,6 +14,6 @@ void shell_loop(char *argv);
 char *read_line(void);
 char **_strtok(char *line);
 int shell_execute(char *argv, char **args);
-void non_interactive(char **env);
+void non_interactive(char *argv);
 
 #endif

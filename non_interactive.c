@@ -32,4 +32,3 @@ void non_interactive(char *argv)
 	tokens = _strtok(command);
 	shell_execute(argv, tokens);
 }
-
