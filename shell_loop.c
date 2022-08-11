@@ -2,7 +2,7 @@
 
 /**
  * shell_loop - main program execution loop
- * @env: environment variables
+ * @argv: program name from main
  */
 
 void shell_loop(char *argv)
