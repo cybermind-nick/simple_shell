@@ -1,57 +1,40 @@
-ALX - Simple Unix Like Shell
-===========================
-     C programming with ALX School!
-================================================================================
+A![alt text](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)
 
-## Description:
-    
-The implementation of a simple shell. The shell is an interactive interface that allows users to execute other commands and utilities in Linux and other UNIX-based operating systems. Shells use either a command-line interface or graphical user interface, depending on a computer's role and particular operation.
+### Description
 
+This shell is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh). Additional functions are also included. This program was written entirely in C as a milestone project for ALX Africa Software Engineering.
 
-## Example:
+### Installation
 
-     ubuntu@ubuntu$ ./hsh     
-     $ pwd
-     /home/ubuntu/simple_shell
-     $ /bin/pwd
-     /home/ubuntu/simple_shell
-     $ ls -la
-     -rw-rw-r-- 1 vagrant vagrant  bytes <date> builtins.c
-     -rw-rw-r-- 1 vagrant vagrant   bytes <date> shell.h
+Clone this repository into your working directory. For best results, files should be compiled with GCC and the following flags: -Wall -Wextra -Werror -pedantic -std=gnu89
 
-## Builtins commands:
+### Usage
 
-     exit: exits a shell
-     
-     env: show/displays environment variables
-     
-## Special Features:
+After compilation, the resulting program can run stand-alone, either in interactive or non-interactive mode.
 
-     Ctrl + C: To prevent the killing of the simple-shell
-     
-     Ctrl + D: exit the simple-shell
+#### Interactive Mode
 
-## Files:
+In interactive mode, simply run the program and wait for the prompt to appear. From there, you can type commands freely, exiting with either the "exit" command or ctrl-D.
 
-     simishell.h: This file contains all the prototypes used for our shell project.
+#### Non-Interactive Mode
 
-     AUTHORS: This file contains all the contributors to this repository.
+In non-interactive mode, echo your desired command and pipe it into the program like this:
 
-     README.md: This file contains this readme text.
+```sh
+echo "ls" | ./shell
+```
 
-     man_1_simple_shell: The man page for our shell.
-     
-     simpleshell.c: This file contain main function of the shell to excute and launch the shell.
-     
-     unnecessary.c: This file contains all the customization functions.
-     
-     shellprocessor.c: This file contains the shell processing and function selector functions.
+In non-interactive mode, the program will exit after finishing your desired command(s).
 
-     builtin.c: This file contains the code for the builtin functions of code.
+#### Included Built-Ins
 
-     utility.c: This file contains helper functions.
-     
-    
-## WARNING:
+Our shell has support for the following built-in commands:
 
-The work is still in progress, and a lot of things like aliases and piping, redirection,... are not available.
+| Command             | Definition                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------------- |
+| exit [n]            | Exit the shell, with an optional exit status, n.                                          |
+| env                 | Print the environment.                                                                    |
+| setenv [var][value] | Set an environment variable and value. If the variable exists, the value will be updated. |
+| unsetenv [var]      | Remove an environment variable.                                                           |
+| cd [dir]            | Change the directory.                                                                     |
+| help [built-in]     | Read documentation for a built-in.                                                        |
