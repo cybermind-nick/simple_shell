@@ -38,3 +38,6 @@ Our shell has support for the following built-in commands:
 | unsetenv [var]      | Remove an environment variable.                                                           |
 | cd [dir]            | Change the directory.                                                                     |
 | help [built-in]     | Read documentation for a built-in.                                                        |
+
+### Authors
+Nicholas Ifeajika & Aloys Aboge Jr
